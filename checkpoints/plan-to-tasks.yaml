@@ -1,0 +1,77 @@
+# Plan-to-Tasks Traceability Checkpoint
+metadata:
+  generated: "2026-11-19"
+  source_plan: "plan.md"
+  target_tasks: "plan.md (inline Task Breakdown)"
+
+summary:
+  total_plan_items: 11
+  covered_plan_items: 11
+  missing_plan_items: 0
+  coverage_percentage: 100.0
+  total_tasks_generated: 53
+  orphan_tasks: 0
+
+phases:
+  - phase_id: "Phase-1"
+    phase_name: "Setup"
+    items:
+      - {item_id: "1.1", description: "Project scaffold and deployment-safe configuration", tasks: ["T001", "T002", "T003", "T004", "T005"]}
+  - phase_id: "Phase-2"
+    phase_name: "Foundational"
+    items:
+      - {item_id: "2.1", description: "Database schema, installer, and seed configuration", tasks: ["T006", "T007", "T008", "T009", "T010"]}
+      - {item_id: "3.1", description: "Authentication, sessions, authorization, and tenant isolation", tasks: ["T011", "T012", "T013", "T014"]}
+  - phase_id: "Phase-3"
+    phase_name: "User Story 1"
+    items:
+      - {item_id: "4.1", description: "Administrator operations and governance", tasks: ["T015", "T016", "T017", "T018", "T019", "T020"]}
+  - phase_id: "Phase-4"
+    phase_name: "User Story 2"
+    items:
+      - {item_id: "5.1", description: "User dashboard, folders, and file explorer", tasks: ["T021", "T022", "T023", "T024", "T025"]}
+  - phase_id: "Phase-5"
+    phase_name: "User Story 3"
+    items:
+      - {item_id: "6.1", description: "Secure upload, storage, download, preview, and file actions", tasks: ["T026", "T027", "T028", "T029", "T030", "T031"]}
+  - phase_id: "Phase-6"
+    phase_name: "User Story 4"
+    items:
+      - {item_id: "7.1", description: "Discovery and trash", tasks: ["T032", "T033", "T034", "T035", "T036"]}
+  - phase_id: "Phase-7"
+    phase_name: "User Story 5"
+    items:
+      - {item_id: "8.1", description: "Version history and rollback", tasks: ["T037", "T038", "T039"]}
+  - phase_id: "Phase-8"
+    phase_name: "User Story 6"
+    items:
+      - {item_id: "9.1", description: "Secure public sharing", tasks: ["T040", "T041", "T042", "T043"]}
+  - phase_id: "Phase-9"
+    phase_name: "Cross-cutting"
+    items:
+      - {item_id: "10.1", description: "Responsive UX, observability, hardening, and documentation", tasks: ["T044", "T045", "T046", "T047"]}
+  - phase_id: "Phase-10"
+    phase_name: "Verification"
+    items:
+      - {item_id: "11.1", description: "Verification and acceptance testing", tasks: ["T048", "T049", "T050", "T051", "T052", "T053"]}
+
+missing_plan_items: []
+orphan_tasks: []
+
+upstream_trace:
+  - {plan_item: "1.1", source_requirements: ["REQ-001", "REQ-002", "REQ-017"], tasks: ["T001", "T002", "T003", "T004", "T005"], full_trace: "REQ-001,REQ-002,REQ-017 → Phase-1.1 → T001-T005"}
+  - {plan_item: "2.1", source_requirements: ["REQ-003", "REQ-004"], tasks: ["T006", "T007", "T008", "T009", "T010"], full_trace: "REQ-003,REQ-004 → Phase-2.1 → T006-T010"}
+  - {plan_item: "3.1", source_requirements: ["REQ-005", "REQ-006", "REQ-007", "REQ-025"], tasks: ["T011", "T012", "T013", "T014"], full_trace: "REQ-005,REQ-006,REQ-007,REQ-025 → Phase-2.3.1 → T011-T014"}
+  - {plan_item: "4.1", source_requirements: ["REQ-008", "REQ-009", "REQ-010"], tasks: ["T015", "T016", "T017", "T018", "T019", "T020"], full_trace: "REQ-008,REQ-009,REQ-010 → Phase-3.4.1 → T015-T020"}
+  - {plan_item: "5.1", source_requirements: ["REQ-011", "REQ-012", "REQ-013"], tasks: ["T021", "T022", "T023", "T024", "T025"], full_trace: "REQ-011,REQ-012,REQ-013 → Phase-4.5.1 → T021-T025"}
+  - {plan_item: "6.1", source_requirements: ["REQ-014", "REQ-015", "REQ-016", "REQ-017"], tasks: ["T026", "T027", "T028", "T029", "T030", "T031"], full_trace: "REQ-014,REQ-015,REQ-016,REQ-017 → Phase-5.6.1 → T026-T031"}
+  - {plan_item: "7.1", source_requirements: ["REQ-018", "REQ-019", "REQ-020"], tasks: ["T032", "T033", "T034", "T035", "T036"], full_trace: "REQ-018,REQ-019,REQ-020 → Phase-6.7.1 → T032-T036"}
+  - {plan_item: "8.1", source_requirements: ["REQ-021"], tasks: ["T037", "T038", "T039"], full_trace: "REQ-021 → Phase-7.8.1 → T037-T039"}
+  - {plan_item: "9.1", source_requirements: ["REQ-022", "REQ-023", "REQ-024"], tasks: ["T040", "T041", "T042", "T043"], full_trace: "REQ-022,REQ-023,REQ-024 → Phase-8.9.1 → T040-T043"}
+  - {plan_item: "10.1", source_requirements: ["REQ-026", "REQ-027"], tasks: ["T044", "T045", "T046", "T047"], full_trace: "REQ-026,REQ-027 → Phase-9.10.1 → T044-T047"}
+  - {plan_item: "11.1", source_requirements: ["REQ-028"], tasks: ["T048", "T049", "T050", "T051", "T052", "T053"], full_trace: "REQ-028 → Phase-10.11.1 → T048-T053"}
+
+validation:
+  passed: true
+  errors: []
+  warnings: []

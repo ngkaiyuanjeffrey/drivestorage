@@ -1,0 +1,57 @@
+batch_id: "B01"
+completed_tasks: ["T001", "T002", "T003", "T004", "T005", "T006", "T007", "T008", "T009", "T010", "T011", "T012", "T013", "T014"]
+blocked_tasks: []
+files_changed:
+  T001:
+    - {file: "index.php", change_type: "created", description: "Application root redirects to login or dashboard"}
+    - {file: "login.php", change_type: "created", description: "Login page"}
+    - {file: "logout.php", change_type: "created", description: "Logout handler"}
+    - {file: "dashboard.php", change_type: "created", description: "Authenticated dashboard shell"}
+    - {file: "profile.php", change_type: "created", description: "Profile and password-change page"}
+  T002:
+    - {file: "config/config.php", change_type: "created", description: "Application and storage configuration"}
+    - {file: "config/database.php", change_type: "created", description: "PDO configuration and connection"}
+  T003:
+    - {file: "includes/bootstrap.php", change_type: "created", description: "Shared bootstrap and secure session startup"}
+    - {file: "includes/functions.php", change_type: "created", description: "Shared escaping, redirect, flash, and logging helpers"}
+  T004:
+    - {file: "assets/css/style.css", change_type: "created", description: "Responsive authentication and dashboard styles"}
+    - {file: "assets/js/app.js", change_type: "created", description: "Shared client-side confirmation behavior"}
+  T005:
+    - {file: "storage/.htaccess", change_type: "created", description: "Directory listing and script execution protection"}
+  T006:
+    - {file: "database/schema.sql", change_type: "created", description: "Normalized storage system schema"}
+  T009:
+    - {file: "install/install.php", change_type: "created", description: "First-run installer and installation lock"}
+  T011:
+    - {file: "includes/auth.php", change_type: "created", description: "Authentication and role guards"}
+  T013:
+    - {file: "includes/csrf.php", change_type: "created", description: "CSRF token generation and verification"}
+  T014:
+    - {file: "README.md", change_type: "created", description: "Current setup and security instructions"}
+upstream_artifacts_consumed: {}
+evidence_mapping: {}
+traceability:
+  - {requirement: "REQ-001", plan_item: "1.1", task: "T001", files: ["index.php", "config/config.php", "assets/css/style.css"], status: "completed"}
+  - {requirement: "REQ-003", plan_item: "2.1", task: "T006", files: ["database/schema.sql"], status: "completed"}
+  - {requirement: "REQ-004", plan_item: "2.1", task: "T009", files: ["install/install.php"], status: "completed"}
+  - {requirement: "REQ-005", plan_item: "3.1", task: "T011", files: ["includes/auth.php", "login.php", "profile.php"], status: "completed"}
+  - {requirement: "REQ-025", plan_item: "3.1", task: "T013", files: ["includes/csrf.php", "includes/functions.php"], status: "completed"}
+protocol_violation: false
+errors: []
+warnings:
+  - "Apache was not listening on localhost:80, so the existing XAMPP URL could not be probed."
+  - "The temporary PHP server returned HTTP 302 from / to /login.php successfully."
+test_results:
+  syntax:
+    command: "php -l on every PHP file under the project"
+    passed: 13
+    failed: 0
+    skipped: 0
+    failures: []
+  root_smoke:
+    command: "php -S 127.0.0.1:8089 -t project; curl http://127.0.0.1:8089/"
+    passed: 1
+    failed: 0
+    skipped: 0
+    failures: []

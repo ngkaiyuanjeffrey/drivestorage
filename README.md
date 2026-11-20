@@ -4,7 +4,7 @@ Nimbus Vault is a native PHP 8.3+ digital file-storage application designed for 
 
 ## Current implementation
 
-The secure foundation is implemented: project entry point, configuration, PDO database access, installer, normalized schema, secure sessions, password hashing, CSRF protection, authentication, public standard-user registration, profile password changes, and a responsive dashboard shell.
+The secure foundation is implemented: project entry point, configuration, PDO database access, installer, normalized schema, secure sessions, password hashing, CSRF protection, authentication, public standard-user registration, profile password changes, and a responsive dashboard with multi-file uploads, file viewing, and downloads.
 
 ## Local installation
 
@@ -25,6 +25,8 @@ Database settings can be supplied with `NIMBUS_DB_HOST`, `NIMBUS_DB_PORT`, `NIMB
 - State-changing forms require a CSRF token.
 - Sessions regenerate their identifier after login.
 - Uploaded storage is protected from directory listing and script execution.
+- Uploads validate size, extension, detected MIME type, quota, and ownership before recording metadata.
+- Files are listed through an ownership-scoped page and served through protected preview/download handlers rather than direct storage URLs.
 - The installer creates `storage/.installed` and cannot be reused until that lock is intentionally removed.
 
 File-management, administration, sharing, versioning, and audit modules are scheduled in the implementation plan.

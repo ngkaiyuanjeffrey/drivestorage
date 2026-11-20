@@ -1,0 +1,10 @@
+[2026-11-19T08:49:27+00:00] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2026-11-19T08:50:14+00:00] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+[2026-11-19T08:52:27+00:00] SQLSTATE[HY000] [1049] Unknown database 'nimbus_vault'
+[2026-11-19T08:59:26+00:00] SQLSTATE[HY000] [1049] Unknown database 'nimbus_vault'
+[2026-11-19T09:36:12+00:00] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[2026-11-20T05:09:56+00:00] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[2026-11-20T05:11:09+00:00] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[2026-11-20T05:14:45+00:00] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[2026-11-20T05:15:11+00:00] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[2026-11-20T05:15:56+00:00] SQLSTATE[HY000] [1049] Unknown database 'nimbus_vault'

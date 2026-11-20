@@ -1,0 +1,133 @@
+# Spec-to-Plan Traceability Checkpoint
+metadata:
+  generated: "2026-11-19"
+  source_spec: "Drive Storage.txt / attached pasted specification"
+  target_plan: "plan.md"
+
+summary:
+  total_requirements: 28
+  covered_requirements: 28
+  missing_requirements: 0
+  coverage_percentage: 100.0
+
+requirements:
+  - req_id: "REQ-001"
+    req_description: "Required PHP/MySQL/Bootstrap/vanilla-JS stack and framework restrictions"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-1", phase_name: "Setup", items: [{item_id: "1.1", description: "Project scaffold and deployment-safe configuration"}]}
+  - req_id: "REQ-002"
+    req_description: "XAMPP, Apache, and cPanel deployment compatibility"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-1", phase_name: "Setup", items: [{item_id: "1.1", description: "Project scaffold and deployment-safe configuration"}]}
+  - req_id: "REQ-003"
+    req_description: "Normalized secure database schema"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-2", phase_name: "Foundational", items: [{item_id: "2.1", description: "Database schema, installer, and seed configuration"}]}
+  - req_id: "REQ-004"
+    req_description: "Installation wizard and installation lock"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-2", phase_name: "Foundational", items: [{item_id: "2.1", description: "Database schema, installer, and seed configuration"}]}
+  - req_id: "REQ-005"
+    req_description: "Authentication, secure sessions, password hashing, login/logout/profile"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-2", phase_name: "Foundational", items: [{item_id: "3.1", description: "Authentication, sessions, authorization, and tenant isolation"}]}
+  - req_id: "REQ-006"
+    req_description: "Admin and user role authorization"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-2", phase_name: "Foundational", items: [{item_id: "3.1", description: "Authentication, sessions, authorization, and tenant isolation"}, {item_id: "4.1", description: "Administrator operations and governance"}]}
+  - req_id: "REQ-007"
+    req_description: "User-owned resource isolation"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-2", phase_name: "Foundational", items: [{item_id: "3.1", description: "Authentication, sessions, authorization, and tenant isolation"}]}
+  - req_id: "REQ-008"
+    req_description: "Admin dashboard and user management"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-3", phase_name: "User Story 1", items: [{item_id: "4.1", description: "Administrator operations and governance"}]}
+  - req_id: "REQ-009"
+    req_description: "Admin file inspection and audit logging"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-3", phase_name: "User Story 1", items: [{item_id: "4.1", description: "Administrator operations and governance"}]}
+  - req_id: "REQ-010"
+    req_description: "Validated configurable settings"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-3", phase_name: "User Story 1", items: [{item_id: "4.1", description: "Administrator operations and governance"}]}
+  - req_id: "REQ-011"
+    req_description: "User dashboard, quota display, recent/starred shortcuts"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-4", phase_name: "User Story 2", items: [{item_id: "5.1", description: "User dashboard, folders, and file explorer"}]}
+  - req_id: "REQ-012"
+    req_description: "Nested folders, breadcrumbs, rename, move, delete, and circularity checks"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-4", phase_name: "User Story 2", items: [{item_id: "5.1", description: "User dashboard, folders, and file explorer"}]}
+  - req_id: "REQ-013"
+    req_description: "Responsive grid/list explorer and accessible UI"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-4", phase_name: "User Story 2", items: [{item_id: "5.1", description: "User dashboard, folders, and file explorer"}]}
+  - req_id: "REQ-014"
+    req_description: "Secure upload, validation, random storage names, and quota enforcement"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-5", phase_name: "User Story 3", items: [{item_id: "6.1", description: "Secure upload, storage, download, preview, and file actions"}]}
+  - req_id: "REQ-015"
+    req_description: "Secure download and supported preview"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-5", phase_name: "User Story 3", items: [{item_id: "6.1", description: "Secure upload, storage, download, preview, and file actions"}]}
+  - req_id: "REQ-016"
+    req_description: "File actions, details, metadata, and notifications"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-5", phase_name: "User Story 3", items: [{item_id: "6.1", description: "Secure upload, storage, download, preview, and file actions"}]}
+  - req_id: "REQ-017"
+    req_description: "Upload-directory and path security"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-1", phase_name: "Setup", items: [{item_id: "1.1", description: "Project scaffold and deployment-safe configuration"}, {item_id: "6.1", description: "Secure upload, storage, download, preview, and file actions"}]}
+  - req_id: "REQ-018"
+    req_description: "Search, recent, starred, and pagination"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-6", phase_name: "User Story 4", items: [{item_id: "7.1", description: "Discovery and trash"}]}
+  - req_id: "REQ-019"
+    req_description: "User-owned tags and filtering"
+    priority: "P2"
+    plan_mapping: {phase: "Phase-6", phase_name: "User Story 4", items: [{item_id: "7.1", description: "Discovery and trash"}]}
+  - req_id: "REQ-020"
+    req_description: "Trash, restore, permanent deletion, and retention"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-6", phase_name: "User Story 4", items: [{item_id: "7.1", description: "Discovery and trash"}]}
+  - req_id: "REQ-021"
+    req_description: "File versions, downloads, and rollback"
+    priority: "P2"
+    plan_mapping: {phase: "Phase-7", phase_name: "User Story 5", items: [{item_id: "8.1", description: "Version history and rollback"}]}
+  - req_id: "REQ-022"
+    req_description: "Secure share links with random tokens and lifecycle controls"
+    priority: "P2"
+    plan_mapping: {phase: "Phase-8", phase_name: "User Story 6", items: [{item_id: "9.1", description: "Secure public sharing"}]}
+  - req_id: "REQ-023"
+    req_description: "Password-protected and expiring public shares"
+    priority: "P2"
+    plan_mapping: {phase: "Phase-8", phase_name: "User Story 6", items: [{item_id: "9.1", description: "Secure public sharing"}]}
+  - req_id: "REQ-024"
+    req_description: "Public file/folder preview, download, and optional ZIP"
+    priority: "P2"
+    plan_mapping: {phase: "Phase-8", phase_name: "User Story 6", items: [{item_id: "9.1", description: "Secure public sharing"}]}
+  - req_id: "REQ-025"
+    req_description: "CSRF, XSS, SQL injection, path traversal, upload, and authorization hardening"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-2", phase_name: "Foundational", items: [{item_id: "3.1", description: "Authentication, sessions, authorization, and tenant isolation"}]}
+  - req_id: "REQ-026"
+    req_description: "Error handling, observability, and performance"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-9", phase_name: "Cross-cutting", items: [{item_id: "10.1", description: "Responsive UX, observability, hardening, and documentation"}]}
+  - req_id: "REQ-027"
+    req_description: "README, installation, deployment, security, and testing documentation"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-9", phase_name: "Cross-cutting", items: [{item_id: "10.1", description: "Responsive UX, observability, hardening, and documentation"}]}
+  - req_id: "REQ-028"
+    req_description: "Complete workflow and final acceptance testing"
+    priority: "P1"
+    plan_mapping: {phase: "Phase-10", phase_name: "Verification", items: [{item_id: "11.1", description: "Verification and acceptance testing"}]}
+
+missing_requirements: []
+orphan_plan_items: []
+validation:
+  passed: true
+  errors: []
+  warnings: ["Requirement IDs were normalized because the source brief did not define formal REQ-XXX identifiers."]
+

@@ -1,0 +1,72 @@
+:root {
+    --nv-ink: #172033;
+    --nv-muted: #65708a;
+    --nv-primary: #4f46e5;
+    --nv-surface: #ffffff;
+    --nv-background: #f5f7fb;
+}
+
+body {
+    background: var(--nv-background);
+    color: var(--nv-ink);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+.auth-page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 1.5rem;
+}
+
+.auth-card {
+    width: min(100%, 440px);
+    padding: 2.5rem;
+    background: var(--nv-surface);
+    border: 1px solid #e6e9f0;
+    border-radius: 1.25rem;
+    box-shadow: 0 1rem 3rem rgba(23, 32, 51, .08);
+}
+
+.brand-mark {
+    width: 3rem;
+    height: 3rem;
+    display: grid;
+    place-items: center;
+    margin-bottom: 1.25rem;
+    border-radius: .9rem;
+    background: var(--nv-primary);
+    color: #fff;
+    font-weight: 800;
+}
+
+.eyebrow {
+    color: var(--nv-primary);
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.form-control:focus {
+    border-color: var(--nv-primary);
+    box-shadow: 0 0 0 .25rem rgba(79, 70, 229, .15);
+}
+
+.btn-primary {
+    background: var(--nv-primary);
+    border-color: var(--nv-primary);
+}
+
+.dashboard-card {
+    height: 100%;
+    padding: 1.5rem;
+    background: var(--nv-surface);
+    border: 1px solid #e6e9f0;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1.5rem rgba(23, 32, 51, .04);
+}
+
+.dashboard-card strong {
+    font-size: 2rem;
+}
